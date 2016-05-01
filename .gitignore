@@ -12,7 +12,7 @@ bootstrap/cache/
 storage/
 .env.*.php
 .env.php
-.env.example
+.env
 composer.lock
 
 # Sublime Text specific
