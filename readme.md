@@ -6,10 +6,12 @@ The objective of this project is create an application to manage your credit car
 
 ## To-do
 
+* [ ] Create views
+* [ ] Remove some stuff from auth scaffold
 * [x] Create `app/models` folder
-* [ ] Create the models
-* [ ] Create the migrations
-* [ ] Generate the auth scaffold (see [Laravel docs](https://laravel.com/docs/5.2/authentication))
+* [x] Create the models
+* [x] Create the migrations
+* [x] Generate the auth scaffold (see [Laravel docs](https://laravel.com/docs/5.2/authentication))
 
 ## License
 

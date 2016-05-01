@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'America/Sao_Paulo',
 
     /*
     |--------------------------------------------------------------------------
@@ -65,7 +65,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'pt-br',
 
     /*
     |--------------------------------------------------------------------------
@@ -78,7 +78,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'en',
+    'fallback_locale' => 'pt-br',
 
     /*
     |--------------------------------------------------------------------------
@@ -160,7 +160,9 @@ return [
          * For Wallet usage...
          */
         Collective\Html\HtmlServiceProvider::class,
-        GrahamCampbell\HTMLMin\HTMLMinServiceProvider::class,
+        Canducci\ZipCode\Providers\ZipCodeServiceProvider::class,
+        Canducci\ZipCode\Providers\ZipCodeAddressServiceProvider::class,
+        PHPLegends\PtBrValidator\ValidatorProvider::class,
 
     ],
 
@@ -208,9 +210,10 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
 
-        'HTMLMin'   => GrahamCampbell\HTMLMin\Facades\HTMLMin::class,
         'Form'      => Collective\Html\FormFacade::class,
         'Html'      => Collective\Html\HtmlFacade::class,
+        'ZipCode'   => Canducci\ZipCode\Facades\ZipCode::class,
+        'Address'   => Canducci\ZipCode\Facades\ZipCodeAddress::class,
 
     ],
 
