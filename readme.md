@@ -1,6 +1,6 @@
 # Wallet
 
-Wallet is a project with college purpose only, Wallet it's a college project without no commercial intent and was made using [Laravel](http://laravel.com/), a PHP framework.
+Wallet it's a college project without no commercial intent and was made using [Laravel](http://laravel.com/), a PHP framework.
 
 The objective of this project is create an application to manage your credit cards in a simple way.
 
