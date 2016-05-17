@@ -7,7 +7,7 @@ The objective of this project is create an application to manage your credit car
 ## To-do
 
 * [ ] Create views
-* [ ] Remove some stuff from auth scaffold
+* [x] Remove some stuff from auth scaffold
 * [x] Create `app/models` folder
 * [x] Create the models
 * [x] Create the migrations

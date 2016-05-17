@@ -5,7 +5,7 @@ namespace Wallet\Http\Controllers;
 use Wallet\Http\Requests;
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class DashboardController extends Controller
 {
     /**
      * Create a new controller instance.
