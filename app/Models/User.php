@@ -94,4 +94,12 @@ class User extends Authenticatable
     {
         return ZipCode::find($this->attributes['cep'])->getObject();
     }
+
+    /**
+     * Get the cards for the user.
+     */
+    public function cards()
+    {
+        return $this->hasMany('Wallet\Models\Card');
+    }
 }

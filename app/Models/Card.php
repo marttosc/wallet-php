@@ -23,7 +23,9 @@ class Card extends Model
      *
      * @var array
      */
-    protected $hidden = ['cvc'];
+    protected $hidden = [
+        'cvc',
+    ];
 
     /**
      * The attributes that should be mutated to dates.
@@ -41,8 +43,26 @@ class Card extends Model
      */
     protected $casts = [
         'id'      => 'integer',
-        'user_id' => 'integer',
-        'flag_id' => 'integer',
         'limit'   => 'double',
     ];
+
+    /**
+     * Get the flag associated with the card.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function flag()
+    {
+        return $this->hasOne('Wallet\Models\Flag', 'id', 'flag_id');
+    }
+
+    /**
+     * Get the user associated with the card.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function user()
+    {
+        return $this->belongsTo('Wallet\Models\User', 'user_id', 'id');
+    }
 }

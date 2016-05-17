@@ -3,9 +3,12 @@
 namespace Wallet\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Flag extends Model
 {
+    use SoftDeletes;
+
     /**
      * Indicates if the model should be timestamped.
      *
@@ -18,7 +21,9 @@ class Flag extends Model
      *
      * @var array
      */
-    protected $fillable = ['name'];
+    protected $fillable = [
+        'name', 'code'
+    ];
 
     /**
      * The attributes that should be mutated to dates.
