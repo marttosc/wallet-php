@@ -13,7 +13,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $this->loadViewsFrom(base_path('resources/views/dashboard'), 'dashboard');
+        $this->loadViewsFrom(base_path('resources/views/site'), 'site');
     }
 
     /**

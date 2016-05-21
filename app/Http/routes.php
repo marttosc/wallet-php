@@ -11,14 +11,20 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Dashboard Routes
+Route::group(
+    [
+        'prefix' => 'dashboard',
+        'namespace' => 'Dashboard'
+    ],
+    function () {
+        Route::get('/', ['as' => 'dashboard', 'uses' => 'HomeController@index']);
+    }
+);
 
-Route::group(['middleware' => 'web'], function() {
-    Route::get('/dashboard', [
-        'as' => 'dashboard', 'uses' => 'DashboardController@index'
-    ]);
+// Site Routes
+Route::group(['namespace' => 'Front'], function () {
+    Route::get('/', ['as' => 'site', 'uses' => 'HomeController@index']);
 });
 
 // Auth Routes

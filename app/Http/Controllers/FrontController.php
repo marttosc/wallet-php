@@ -2,7 +2,7 @@
 
 namespace Wallet\Http\Controllers;
 
-abstract class DashboardController extends Controller
+abstract class FrontController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -11,6 +11,6 @@ abstract class DashboardController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('guest');
     }
 }
