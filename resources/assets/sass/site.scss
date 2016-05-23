@@ -1,5 +1,8 @@
+/**
+ * Site app
+ */
+
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 @import "node_modules/font-awesome/scss/font-awesome";
 
-@import "resources/assets/sass/bootswatch/_variables";
-@import "resources/assets/sass/bootswatch/_bootswatch";
+@import "site/site";

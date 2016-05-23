@@ -25,6 +25,6 @@ class HomeController extends Front
      */
     public function index()
     {
-        return view('site::welcome');
+        return view('site::home');
     }
 }

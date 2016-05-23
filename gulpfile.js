@@ -1,4 +1,6 @@
-var elixir = require('laravel-elixir');
+var gulp = require('gulp'),
+    elixir = require('laravel-elixir'),
+    less2scss = require('gulp-less-to-scss');
 
 /*
  |--------------------------------------------------------------------------
@@ -11,9 +13,50 @@ var elixir = require('laravel-elixir');
  |
  */
 
+// Convert site LESS files to SASS
+gulp.task('less2scss', function() {
+    gulp.src('resources/assets/less/*/*.less')
+        .pipe(less2scss())
+        .pipe(gulp.dest('resources/assets/sass'));
+});
+
 elixir(function(mix) {
     mix
+        // Run less2scss task
+        .task('less2scss')
+
+        // Copy Font Awesome and Material Design font icons
+        .copy('resources/assets/fonts/*.*', 'public/fonts/')
         .copy('node_modules/font-awesome/fonts/*.*', 'public/fonts/')
-        .sass('app.scss')
-        .browserify('app.js');
+
+        // Compile dashboard SASS file
+        .sass('dashboard.scss')
+
+        // Compile site SASS file
+        .sass('site.scss')
+
+        // jQuery and Bootstrap
+        .browserify('bootstrap.js')
+
+        // Browserify dashboard JavaScript files
+        .browserify('dashboard.js')
+
+        // Browserify site JavaScript files
+        .scripts(
+            [
+                'site/ripples.js',
+                'site/material.js',
+                'site/wow.js',
+                'site/jquery.mmenu.min.all.js',
+                'site/count-to.js',
+                'site/jquery.inview.min.js',
+                'site/classie.js',
+                'site/jquery.nav.js',
+                'site/smooth-on-scroll.js',
+                'site/smooth-scroll.js',
+                'site/main.js',
+                'site.js'
+            ],
+            'public/js/site.js'
+        );
 });

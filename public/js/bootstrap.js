@@ -12213,10 +12213,6 @@ return jQuery;
 window.$ = window.jQuery = require('jquery');
 require('bootstrap-sass');
 
-$(document).ready(function () {
-    console.log($.fn.tooltip.Constructor.VERSION);
-});
-
 },{"bootstrap-sass":1,"jquery":2}]},{},[3]);
 
-//# sourceMappingURL=app.js.map
+//# sourceMappingURL=bootstrap.js.map
