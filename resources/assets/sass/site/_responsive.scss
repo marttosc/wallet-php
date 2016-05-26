@@ -1,13 +1,13 @@
 
-	// RESPONSIVE FIXES	
-	 
-	@media (min-width: 768px) and (max-width: 1024px) { 
+	// RESPONSIVE FIXES
+
+	@media (min-width: 768px) and (max-width: 1024px) {
 		.title-small{
 			font-size: 20px;
 			margin-bottom: 10px;
 		}
-		// why Section
-		#why{
+		// work Section
+		#work{
 			.content h2{
 				font-size: 20px;
 				line-height: 30px;
@@ -34,11 +34,11 @@
 	    }
 	    #contact .info-inner{
 	  	padding-left: 15px;
-	  }	  
-	 
+	  }
+
 	}
-	 
-	 
+
+
 	@media(max-width:480px) {
 		.section{
 			padding: 50px 0;
@@ -64,7 +64,7 @@
 	      float: right;
 	    }
 	  }
-	 
+
 	  // Hero area Section
 	  .hero-area .contents{
 	  	padding-top: 50px;
@@ -76,38 +76,38 @@
 		  }
 	  }
 
-	  #features .box-item .icon {
+	  #whatis .box-item .icon {
 	    margin: 10px 15px;
 	    float: left;
 	  }
-	  #features .text {
+	  #whatis .text {
 	    text-align: left;
 	  }
-	  #features .box-item .text h4 {
+	  #whatis .box-item .text h4 {
 	    font-size: 12px;
 	    line-height: 16px;
 	  }
-	  #features .box-item .text p {
+	  #whatis .box-item .text p {
 	    font-size: 12px;
 	  }
-	  #features .show-box {
+	  #whatis .show-box {
 	    padding: 24px 30px;
 	  }
-		#features .content-left, #features .content-right{
+		#whatis .content-left, #whatis .content-right{
 			margin-bottom: 60px;
 		}
 	  // Features Section
-	  #features{
+	  #whatis{
 	  	.features{
 				h4{font-size: 14px;}
 				.icon i{
 					padding-right: 22px;
 				}
 	  	}
-	  } 
+	  }
 
-	  // Why Section
-	  #why{
+	  // work Section
+	  #work{
 	  	.content{
 	  		 h2{ font-size: 20px; line-height: 30px;}
 	  		  .list-item li{font-size: 13px;}
@@ -122,7 +122,7 @@
 	  #cta{
 	  	h2{
 	  		font-size: 18px;
-	  	}	  	
+	  	}
 	  	.btn{
 	  		margin-top: 30px;
 	  	}

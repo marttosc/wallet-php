@@ -34,7 +34,8 @@ The second template is Pluto and was created by GrayGrids. You can check and dow
 
 ## To-do
 
-* [ ] Modify the site page
+* [ ] Create the dashboard pages
+* [x] Modify the site page
 * [x] Create dashboard and site namespaces
 * [x] Create views
 * [x] Remove some stuff from auth scaffold

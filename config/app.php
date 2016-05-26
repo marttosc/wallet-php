@@ -163,7 +163,6 @@ return [
         Canducci\ZipCode\Providers\ZipCodeServiceProvider::class,
         Canducci\ZipCode\Providers\ZipCodeAddressServiceProvider::class,
         PHPLegends\PtBrValidator\ValidatorProvider::class,
-
     ],
 
     /*

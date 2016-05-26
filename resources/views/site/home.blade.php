@@ -26,14 +26,22 @@
                 <li>
                     <a href="#work">Produtividade</a>
                 </li>
-                </li>
                 <li>
                     <a href="#entities">Entidades</a>
-                <li>
-                    <a href="#register">Registrar</a>
                 </li>
+
+                @if(Auth::guest())
+                    <li>
+                        <a href="#register">Registrar</a>
+                    </li>
+                @endif
+
                 <li>
-                    <a href="{{ url('login') }}">Entrar</a>
+                    @if (Auth::guest())
+                        <a href="{{ url('login') }}">Entrar</a>
+                    @else
+                        <a href="{{ route('dashboard') }}">Olá, {{ Auth::user()->first_name }}</a>
+                    @endif
                 </li>
             </ul>
 
@@ -65,7 +73,11 @@
                     <div class="contents text-right">
                         <h1 class="wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms">Wallet. Gerencie seus cartões de crédito.</h1>
                         <p class="wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="400ms">Controle simples, rápido e seguro.</p>
-                        <a href="{{ url('register') }}" data-wow-duration="1000ms" data-wow-delay="400ms" class="btn btn-lg btn-primary wow fadeInUp">Registre</a>
+                        @if (Auth::guest())
+                            <a href="#register" data-wow-duration="1000ms" data-wow-delay="400ms" class="btn btn-lg btn-primary wow fadeInUp">Registre</a>
+                        @else
+                            <a href="{{ route('dashboard') }}" data-wow-duration="1000ms" data-wow-delay="400ms" class="btn btn-lg btn-primary wow fadeInUp">Entre, {{ Auth::user()->first_name }}</a>
+                        @endif
                         <a href="#whatis" data-wow-duration="1000ms" data-wow-delay="500ms" class="btn btn-lg btn-border wow fadeInUp">Saiba mais</a>
                     </div>
                 </div>
@@ -212,11 +224,11 @@
             <div class="container">
                 <div class="section-header text-center">
                     <h1 class="section-title wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">Registre-se</h1>
-                    <h2 class="section-subtitle wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">Venha simplificar conosco</h2>
+                    <h2 class="section-subtitle wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">Tenha maior controle de seus cartões</h2>
                 </div>
                 <div class="row">
-                    <div class="col-md-6 col-sm-6 col-md-offset-3 col-sm-offset-3 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-                        {{-- Form goes here. --}}
+                    <div class="col-md-8 col-sm-4 col-md-offset-2 col-sm-offset-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+                        @include('auth.register')
                     </div>
                 </div>
             </div>
