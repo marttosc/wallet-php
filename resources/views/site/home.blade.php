@@ -43,6 +43,12 @@
                         <a href="{{ route('dashboard') }}">Olá, {{ Auth::user()->first_name }}</a>
                     @endif
                 </li>
+
+                @unless (Auth::guest())
+                    <li>
+                        <a href="{{ url('logout') }}">Sair</a>
+                    </li>
+                @endunless
             </ul>
 
             <button class="close-button" id="close-button">Fechar menu</button>
@@ -228,6 +234,8 @@
                 </div>
                 <div class="row">
                     <div class="col-md-8 col-sm-4 col-md-offset-2 col-sm-offset-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+
+
                         @include('auth.register')
                     </div>
                 </div>

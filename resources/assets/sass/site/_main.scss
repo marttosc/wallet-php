@@ -11,7 +11,7 @@ body{
 }
 
 //Colors
-$color: #4A148C;
+$blue: #3f51b5;
 
 .btn{
 	font-size: 14px;
@@ -68,7 +68,7 @@ a:focus{
 }
 .title-small{
 	font-size: 38px;
-	color: $color;
+	color: $blue;
 	margin-bottom: 30px;
 	line-height: 50px;
 }
@@ -99,7 +99,7 @@ a:focus{
     -webkit-animation-name: fadeInDown;
     animation-name: fadeInDown;
     padding: 0!important;
-	background: $color !important;
+	background: #3f51b5 !important;
   }
 .sticky-navigation{
 	.row{
@@ -308,14 +308,14 @@ background: #fff;
 	      line-height: 80px;
 	      border-radius: 50%;
 	      font-size: 36px;
-	      color: $color;
+	      color: $blue;
 	    }
 	  }
 	  h4{
 	    margin-bottom: 10px;
 	    font-size: 20px;
 	    font-weight: 700;
-	    color: $color;
+	    color: $blue;
 	  }
 	  .features-text{
 	    padding-left: 80px;
@@ -340,14 +340,14 @@ background: #fff;
 	      line-height: 80px;
 	      border-radius: 50%;
 	      font-size: 36px;
-	      color: $color;
+	      color: $blue;
 	    }
 	  }
 	  h4{
 	    margin-bottom: 10px;
 	    font-size: 20px;
 	    font-weight: 700;
-	    color: $color;
+	    color: $blue;
 	  }
 	  .services-text{
 	    padding-left: 80px;
@@ -396,7 +396,7 @@ background: #fff;
   padding-bottom: 40px;
 }
 #services .box-item .icon {
-  background: $color;
+  background: #3F51B5;
   text-align: center;
   margin-top: 12px;
   -webkit-transition: background 0.2s, color 0.2s;
@@ -426,7 +426,7 @@ background: #fff;
   line-height: 18px;
 }
 #services .box-item:hover .icon {
-  background: $color;
+  background: #3F51B5;
 }
 #services .box-item:hover .icon i {
   color: #ffffff;
@@ -470,7 +470,7 @@ background: #fff;
 
 // Cta Section
 #cta{
-	background: $color;
+	background: $blue;
 	.drawer{
 		float: left;
 		margin-right: 40px;
@@ -605,7 +605,7 @@ background: #fff;
 	}
 	.features-content:hover i,
 	.features-content:hover h3{
-		color: $color;
+		color: $blue;
 	}
 }
 
@@ -642,7 +642,7 @@ background: #fff;
 	}
 	.services-content:hover i,
 	.services-content:hover h3{
-		color: $color;
+		color: $blue;
 	}
 }
 
@@ -706,7 +706,7 @@ background: #fff;
 		}
 		h5 {
 		  text-align: center;
-		  color: $color;
+		  color: $blue;
 		  font-size: 16px;
 		  text-transform: uppercase;
 		  line-height: 32px;
@@ -721,7 +721,7 @@ background: #fff;
 	.timer {
 	  font-size: 50px;
 	  font-weight: 100;
-	  color: $color;
+	  color: $blue;
 	  text-transform: uppercase;
 	  text-align:center;
 	  line-height:80px;
@@ -744,7 +744,7 @@ background: #fff;
 			margin-bottom: 20px;
 			i{
 				font-size: 36px;
-				color: $color;
+				color: $blue;
 			}
 		}
 		h4{
@@ -1012,7 +1012,7 @@ background: #fff;
 	  width: 20px;
 	  height: 20px;
 	  border-radius: 100%;
-		background: $color;
+		background: #3f51b5;
 	   }
 	  .ball-triangle-path > div:nth-of-type(1) {
 	    top: 50px; }

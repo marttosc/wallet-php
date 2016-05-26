@@ -16324,7 +16324,7 @@ a:focus {
 
 .title-small {
   font-size: 38px;
-  color: #4A148C;
+  color: #3f51b5;
   margin-bottom: 30px;
   line-height: 50px; }
 
@@ -16349,7 +16349,7 @@ a:focus {
   -webkit-animation-name: fadeInDown;
   animation-name: fadeInDown;
   padding: 0 !important;
-  background: #4A148C !important; }
+  background: #3f51b5 !important; }
 
 .sticky-navigation .row {
   padding: 0; }
@@ -16526,12 +16526,12 @@ a:focus {
         line-height: 80px;
         border-radius: 50%;
         font-size: 36px;
-        color: #4A148C; }
+        color: #3f51b5; }
     #whatis .features h4 {
       margin-bottom: 10px;
       font-size: 20px;
       font-weight: 700;
-      color: #4A148C; }
+      color: #3f51b5; }
     #whatis .features .features-text {
       padding-left: 80px; }
       #whatis .features .features-text p {
@@ -16551,12 +16551,12 @@ a:focus {
         line-height: 80px;
         border-radius: 50%;
         font-size: 36px;
-        color: #4A148C; }
+        color: #3f51b5; }
     #services .services h4 {
       margin-bottom: 10px;
       font-size: 20px;
       font-weight: 700;
-      color: #4A148C; }
+      color: #3f51b5; }
     #services .services .services-text {
       padding-left: 80px; }
       #services .services .services-text p {
@@ -16602,7 +16602,7 @@ a:focus {
   padding-bottom: 40px; }
 
 #services .box-item .icon {
-  background: #4A148C;
+  background: #3F51B5;
   text-align: center;
   margin-top: 12px;
   transition: background 0.2s, color 0.2s; }
@@ -16627,7 +16627,7 @@ a:focus {
   line-height: 18px; }
 
 #services .box-item:hover .icon {
-  background: #4A148C; }
+  background: #3F51B5; }
 
 #services .box-item:hover .icon i {
   color: #ffffff; }
@@ -16659,7 +16659,7 @@ a:focus {
     padding: 48px 0; }
 
 #cta {
-  background: #4A148C; }
+  background: #3f51b5; }
   #cta .drawer {
     float: left;
     margin-right: 40px; }
@@ -16759,7 +16759,7 @@ a:focus {
       padding: 0px 4px; }
   #other-features .features-content:hover i,
   #other-features .features-content:hover h3 {
-    color: #4A148C; }
+    color: #3f51b5; }
 
 #other-services {
   padding-bottom: 35px; }
@@ -16787,7 +16787,7 @@ a:focus {
       padding: 0px 4px; }
   #other-services .services-content:hover i,
   #other-services .services-content:hover h3 {
-    color: #4A148C; }
+    color: #3f51b5; }
 
 #testimonial {
   width: 100%;
@@ -16830,7 +16830,7 @@ a:focus {
       line-height: 64px; }
   #counter .counter-item h5 {
     text-align: center;
-    color: #4A148C;
+    color: #3f51b5;
     font-size: 16px;
     text-transform: uppercase;
     line-height: 32px; }
@@ -16842,7 +16842,7 @@ a:focus {
   #counter .timer {
     font-size: 50px;
     font-weight: 100;
-    color: #4A148C;
+    color: #3f51b5;
     text-transform: uppercase;
     text-align: center;
     line-height: 80px; }
@@ -16858,7 +16858,7 @@ a:focus {
       margin-bottom: 20px; }
       #contact .info .icon i {
         font-size: 36px;
-        color: #4A148C; }
+        color: #3f51b5; }
     #contact .info h4 {
       color: #385461;
       font-size: 24px;
@@ -17079,7 +17079,7 @@ a:focus {
   width: 20px;
   height: 20px;
   border-radius: 100%;
-  background: #4A148C; }
+  background: #3f51b5; }
 
 .ball-triangle-path > div:nth-of-type(1) {
   top: 50px; }
