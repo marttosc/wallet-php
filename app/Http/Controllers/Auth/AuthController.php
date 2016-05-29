@@ -4,6 +4,7 @@ namespace Wallet\Http\Controllers\Auth;
 
 use Validator;
 use Wallet\Models\User;
+use Illuminate\Http\Request;
 use Wallet\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
@@ -141,5 +142,19 @@ class AuthController extends Controller
             'password_confirmation.min'      => 'As senhas devem ser iguais.',
             'password_confirmation.same'     => 'As senhas devem ser iguais.',
         ];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function validateLogin(Request $request)
+    {
+        $this->validate($request, [
+            'email' => 'required',
+            'password' => 'required',
+        ], [
+            'email.required' => 'O email é obrigatório.',
+            'password.required' => 'A senha é obrigatória.',
+        ]);
     }
 }

@@ -27,6 +27,7 @@ elixir(function(mix) {
 
         // Copy Font Awesome, Material Design font icons and Ionicons
         .copy('resources/assets/fonts/*.*', 'public/fonts/')
+        .copy('node_modules/bootstrap-sass/assets/fonts/bootstrap/*.*', 'public/fonts/')
         .copy('node_modules/font-awesome/fonts/*.*', 'public/fonts/')
         .copy('node_modules/ionicons/dist/fonts/*.*', 'public/fonts/')
 
