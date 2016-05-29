@@ -11,7 +11,7 @@ body{
 }
 
 //Colors
-$blue: #3f51b5;
+$blue: #4A148C;
 
 .btn{
 	font-size: 14px;
@@ -99,7 +99,7 @@ a:focus{
     -webkit-animation-name: fadeInDown;
     animation-name: fadeInDown;
     padding: 0!important;
-	background: #3f51b5 !important;
+	background: #4A148C !important;
   }
 .sticky-navigation{
 	.row{
@@ -396,7 +396,7 @@ background: #fff;
   padding-bottom: 40px;
 }
 #services .box-item .icon {
-  background: #3F51B5;
+  background: #4A148C;
   text-align: center;
   margin-top: 12px;
   -webkit-transition: background 0.2s, color 0.2s;
@@ -426,7 +426,7 @@ background: #fff;
   line-height: 18px;
 }
 #services .box-item:hover .icon {
-  background: #3F51B5;
+  background: #4A148C;
 }
 #services .box-item:hover .icon i {
   color: #ffffff;
@@ -1012,7 +1012,7 @@ background: #fff;
 	  width: 20px;
 	  height: 20px;
 	  border-radius: 100%;
-		background: #3f51b5;
+		background: #4A148C;
 	   }
 	  .ball-triangle-path > div:nth-of-type(1) {
 	    top: 50px; }

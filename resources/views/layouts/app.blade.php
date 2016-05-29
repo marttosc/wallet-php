@@ -1,70 +1,121 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
-    <title>
-        @hasSection('title')
-            @yield('title') - Wallet!
-        @else
-            Wallet!
-        @endif
-    </title>
+        <title>
+            @hasSection('title')
+                @yield('title') - Wallet!
+            @else
+                Wallet!
+            @endif
+        </title>
 
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-</head>
-<body id="app-layout">
-    <nav class="navbar navbar-default navbar-static-top">
-        <div class="container">
-            <div class="navbar-header">
-
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                    <span class="sr-only">Alternar Menu</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {!! $page_title or '<i class="fa fa-credit-card-alt"></i> Wallet!' !!}
+        <link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/adminlte.css') }}" rel="stylesheet">
+    </head>
+    <body class="hold-transition skin-purple sidebar-mini">
+        <div class="wrapper">
+            <header class="main-header">
+                <a href="{{ route('site') }}" class="logo">
+                    <span class="logo-mini"><strong>W</strong></span>
+                    <span class="logo-lg"><strong>Wallet</strong></span>
                 </a>
-            </div>
 
-            <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                <ul class="nav navbar-nav">
-                    @if (Auth::guest())
-                        <li><a href="{{ url('/about') }}">Conheça</a></li>
-                        <li><a href="{{ url('/contact') }}">Contato</a></li>
-                    @else
-                        <li><a href="{{ route('dashboard') }}">Painel</a></li>
-                        <li><a href="{{ url('/statements') }}">Extratos</a></li>
-                    @endif
-                </ul>
+                <nav class="navbar navbar-static-top" role="navigation">
+                    <a href="#" data-toggle="offcanvas" role="button" class="sidebar-toggle">
+                        <span class="sr-only">Alternar navegação</span>
+                    </a>
 
-                <ul class="nav navbar-nav navbar-right">
-                    @if (Auth::guest())
-                        <li><a href="{{ url('/login') }}">Entrar</a></li>
-                        <li><a href="{{ url('/register') }}"><strong>Registrar</strong></a></li>
-                    @else
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                {{ Auth::user()->name }} <span class="caret"></span>
+                    <div class="navbar-custom-menu">
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown user user-menu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <img src="{{ asset('img/beethoven.jpg') }}" alt="Avatar" class="user-image">
+
+                                    <span class="hidden-xs">{{ Auth::user()->name }}</span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="user-header">
+                                        <img src="{{ asset('img/beethoven.jpg') }}" class="img-circle" alt="Avatar">
+
+                                        <p>
+                                            {{ Auth::user()->name }}
+                                            <small>Membro desde {{ Auth::user()->created_at->format('M/Y') }}</small>
+                                        </p>
+                                    </li>
+                                    <li class="user-body">
+                                        <div class="row">
+                                            <div class="col-xs-12 text-center">
+                                                <a href="#">Cartões</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="user-footer">
+                                        <div class="pull-left">
+                                            <a href="#" class="btn btn-default btn-flat">Perfil</a>
+                                        </div>
+                                        <div class="pull-right">
+                                            <a href="{{ url('logout') }}" class="btn btn-default btn-flat">Sair</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+
+            <aside class="main-sidebar">
+                <section class="sidebar">
+                    <div class="user-panel">
+                        <div class="pull-left image">
+                            <img src="{{ asset('img/beethoven.jpg') }}" class="img-circle" alt="Avatar">
+                        </div>
+                        <div class="pull-left info">
+                            <p>{{ Auth::user()->name }}</p>
+                            <a href="javascript:void()"><i class="fa fa-circle text-success"></i> {{ Auth::user()->email }}</a>
+                        </div>
+                    </div>
+
+                    <ul class="sidebar-menu">
+                        <li class="header">NAVEGAÇÃO</li>
+                        <li class="active">
+                            <a href="{{ route('dashboard') }}">
+                                <i class="fa fa-dashboard"></i>
+                                <span>Início</span>
                             </a>
-
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Sair</a></li>
-                            </ul>
                         </li>
-                    @endif
-                </ul>
+                    </ul>
+                </section>
+            </aside>
+
+            <div class="content-wrapper">
+                <section class="content-header">
+                    <h1>
+                        @yield('title')
+                        <small>@yield('description')</small>
+                    </h1>
+                </section>
+
+                <section class="content">
+                    @yield('content')
+                </section>
             </div>
+
+            <footer class="main-footer">
+                <div class="pull-right hidden-xs">
+                    Lorem ipsum dolor sit amet.
+                </div>
+
+                <strong>&copy; {{ date('Y') }} Wallet.</strong>
+            </footer>
         </div>
-    </nav>
 
-    @yield('content')
-
-    <script src="{{ asset('js/app.js') }}"></script>
-</body>
+        <script src="{{ asset('js/bootstrap.js') }}"></script>
+        <script src="{{ asset('js/dashboard.js') }}"></script>
+        <script src="{{ asset('js/adminlte.js') }}"></script>
+    </body>
 </html>

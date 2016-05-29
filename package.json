@@ -13,6 +13,7 @@
     "babel-preset-react": "^6.5.0",
     "bootstrap-sass": "^3.3.6",
     "gulp-less-to-scss": "0.0.4",
+    "ionicons": "^3.0.0",
     "jquery": "^2.2.3",
     "laravel-elixir": "^5.0.0"
   }

@@ -41,6 +41,16 @@ class AuthController extends Controller
     }
 
     /**
+     * Redirect the register route to register section on main page.
+     *
+     * @return \Illuminate\Routing\Redirector
+     */
+    public function redirectToRegister()
+    {
+        return redirect()->route('site', ['#register']);
+    }
+
+    /**
      * Get a validator for an incoming registration request.
      *
      * @param  array  $data

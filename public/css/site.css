@@ -16324,7 +16324,7 @@ a:focus {
 
 .title-small {
   font-size: 38px;
-  color: #3f51b5;
+  color: #4A148C;
   margin-bottom: 30px;
   line-height: 50px; }
 
@@ -16349,7 +16349,7 @@ a:focus {
   -webkit-animation-name: fadeInDown;
   animation-name: fadeInDown;
   padding: 0 !important;
-  background: #3f51b5 !important; }
+  background: #4A148C !important; }
 
 .sticky-navigation .row {
   padding: 0; }
@@ -16526,12 +16526,12 @@ a:focus {
         line-height: 80px;
         border-radius: 50%;
         font-size: 36px;
-        color: #3f51b5; }
+        color: #4A148C; }
     #whatis .features h4 {
       margin-bottom: 10px;
       font-size: 20px;
       font-weight: 700;
-      color: #3f51b5; }
+      color: #4A148C; }
     #whatis .features .features-text {
       padding-left: 80px; }
       #whatis .features .features-text p {
@@ -16551,12 +16551,12 @@ a:focus {
         line-height: 80px;
         border-radius: 50%;
         font-size: 36px;
-        color: #3f51b5; }
+        color: #4A148C; }
     #services .services h4 {
       margin-bottom: 10px;
       font-size: 20px;
       font-weight: 700;
-      color: #3f51b5; }
+      color: #4A148C; }
     #services .services .services-text {
       padding-left: 80px; }
       #services .services .services-text p {
@@ -16602,7 +16602,7 @@ a:focus {
   padding-bottom: 40px; }
 
 #services .box-item .icon {
-  background: #3F51B5;
+  background: #4A148C;
   text-align: center;
   margin-top: 12px;
   transition: background 0.2s, color 0.2s; }
@@ -16627,7 +16627,7 @@ a:focus {
   line-height: 18px; }
 
 #services .box-item:hover .icon {
-  background: #3F51B5; }
+  background: #4A148C; }
 
 #services .box-item:hover .icon i {
   color: #ffffff; }
@@ -16659,7 +16659,7 @@ a:focus {
     padding: 48px 0; }
 
 #cta {
-  background: #3f51b5; }
+  background: #4A148C; }
   #cta .drawer {
     float: left;
     margin-right: 40px; }
@@ -16759,7 +16759,7 @@ a:focus {
       padding: 0px 4px; }
   #other-features .features-content:hover i,
   #other-features .features-content:hover h3 {
-    color: #3f51b5; }
+    color: #4A148C; }
 
 #other-services {
   padding-bottom: 35px; }
@@ -16787,7 +16787,7 @@ a:focus {
       padding: 0px 4px; }
   #other-services .services-content:hover i,
   #other-services .services-content:hover h3 {
-    color: #3f51b5; }
+    color: #4A148C; }
 
 #testimonial {
   width: 100%;
@@ -16830,7 +16830,7 @@ a:focus {
       line-height: 64px; }
   #counter .counter-item h5 {
     text-align: center;
-    color: #3f51b5;
+    color: #4A148C;
     font-size: 16px;
     text-transform: uppercase;
     line-height: 32px; }
@@ -16842,7 +16842,7 @@ a:focus {
   #counter .timer {
     font-size: 50px;
     font-weight: 100;
-    color: #3f51b5;
+    color: #4A148C;
     text-transform: uppercase;
     text-align: center;
     line-height: 80px; }
@@ -16858,7 +16858,7 @@ a:focus {
       margin-bottom: 20px; }
       #contact .info .icon i {
         font-size: 36px;
-        color: #3f51b5; }
+        color: #4A148C; }
     #contact .info h4 {
       color: #385461;
       font-size: 24px;
@@ -17079,7 +17079,7 @@ a:focus {
   width: 20px;
   height: 20px;
   border-radius: 100%;
-  background: #3f51b5; }
+  background: #4A148C; }
 
 .ball-triangle-path > div:nth-of-type(1) {
   top: 50px; }
@@ -17095,10 +17095,10 @@ a:focus {
   .title-small {
     font-size: 20px;
     margin-bottom: 10px; }
-  #why .content h2 {
+  #work .content h2 {
     font-size: 20px;
     line-height: 30px; }
-  #why img {
+  #work img {
     width: 100%; }
   #screenshot .portfolio figure figcaption .heading {
     padding: 0 30px; }
@@ -17134,32 +17134,32 @@ a:focus {
       font-size: 20px; }
     .hero-area .contents p {
       font-size: 14px; }
-  #features .box-item .icon {
+  #whatis .box-item .icon {
     margin: 10px 15px;
     float: left; }
-  #features .text {
+  #whatis .text {
     text-align: left; }
-  #features .box-item .text h4 {
+  #whatis .box-item .text h4 {
     font-size: 12px;
     line-height: 16px; }
-  #features .box-item .text p {
+  #whatis .box-item .text p {
     font-size: 12px; }
-  #features .show-box {
+  #whatis .show-box {
     padding: 24px 30px; }
-  #features .content-left, #features .content-right {
+  #whatis .content-left, #whatis .content-right {
     margin-bottom: 60px; }
-  #features .features h4 {
+  #whatis .features h4 {
     font-size: 14px; }
-  #features .features .icon i {
+  #whatis .features .icon i {
     padding-right: 22px; }
-  #why .content h2 {
+  #work .content h2 {
     font-size: 20px;
     line-height: 30px; }
-  #why .content .list-item li {
+  #work .content .list-item li {
     font-size: 13px; }
-  #why .content .btn {
+  #work .content .btn {
     margin-bottom: 60px; }
-  #why img {
+  #work img {
     width: 100%; }
   #cta h2 {
     font-size: 18px; }

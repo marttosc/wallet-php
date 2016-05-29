@@ -25,9 +25,16 @@ elixir(function(mix) {
         // Run less2scss task
         .task('less2scss')
 
-        // Copy Font Awesome and Material Design font icons
+        // Copy Font Awesome, Material Design font icons and Ionicons
         .copy('resources/assets/fonts/*.*', 'public/fonts/')
         .copy('node_modules/font-awesome/fonts/*.*', 'public/fonts/')
+        .copy('node_modules/ionicons/dist/fonts/*.*', 'public/fonts/')
+
+        // Copy AdminLTE js
+        .copy('node_modules/admin-lte/dist/js/app.js', 'public/js/adminlte.js')
+
+        // Compile dashboard LESS file
+        .less('dashboard.less', 'public/css/adminlte.css')
 
         // Compile dashboard SASS file
         .sass('dashboard.scss')
