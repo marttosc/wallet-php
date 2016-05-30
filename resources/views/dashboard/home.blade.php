@@ -28,7 +28,11 @@
             <div class="info-box-content">
                 <span class="info-box-text">Limite acumulado</span>
                 <span class="info-box-number">
-                    {{ number_format(Auth::user()->cards()->cumulativeLimit(), 2, ',', '.') }}
+                    @if (Auth::user()->cards()->count() > 0)
+                        {{ number_format(Auth::user()->cards()->cumulativeLimit(), 2, ',', '.') }}
+                    @else
+                        {{ number_format(0, 2, ',', '.') }}
+                    @endif
                 </span>
             </div>
         </div>
