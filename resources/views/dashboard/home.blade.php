@@ -28,11 +28,7 @@
             <div class="info-box-content">
                 <span class="info-box-text">Limite acumulado</span>
                 <span class="info-box-number">
-                    @if (Auth::user()->cards()->count() > 0)
-                        {{ number_format(Auth::user()->cards()->cumulativeLimit(), 2, ',', '.') }}
-                    @else
-                        {{ number_format(0, 2, ',', '.') }}
-                    @endif
+                    {{ number_format(Auth::user()->cumulativeLimit(), 2, ',', '.') }}
                 </span>
             </div>
         </div>
@@ -47,7 +43,7 @@
             <div class="info-box-content">
                 <span class="info-box-text">Bandeiras utilizadas</span>
                 <span class="info-box-number">
-                    {{ Auth::user()->cards()->uniqueFlags()->count() }}
+                    {{ Auth::user()->uniqueFlags()->count() }}
                 </span>
             </div>
         </div>
@@ -62,7 +58,7 @@
             <div class="info-box-content">
                 <span class="info-box-text">Faturas a vencer</span>
                 <span class="info-box-number">
-                    {{ Auth::user()->cards()->closing()->count() }}
+                    {{ Auth::user()->closingCards()->count() }}
                 </span>
             </div>
         </div>

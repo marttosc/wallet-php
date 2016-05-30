@@ -102,4 +102,33 @@ class User extends Authenticatable
     {
         return $this->hasMany('Wallet\Models\Card');
     }
+
+    /**
+     * Get the sum of the cards limit.
+     *
+     * @return float
+     */
+    public function cumulativeLimit()
+    {
+        return $this->cards->sum('limit');
+    }
+
+    /**
+     * Get the flags used by user on their cards.
+     *
+     * @return \Illuminate\Database\Eloquent\Collection
+     */
+    public function uniqueFlags()
+    {
+        return $this->cards->unique('flag_id');
+    }
+
+    public function closingCards($period = 15)
+    {
+        $carbon = app(\Carbon\Carbon::class);
+
+        return $this->cards->filter(function($card) use ($period, $carbon) {
+            return $card->closes_at->diff($carbon->now())->days <= $period;
+        });
+    }
 }
