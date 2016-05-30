@@ -47,11 +47,7 @@
 
                     <div class="row">
                         <div class="col-xs-8">
-                            <div class="checkbox">
-                                <label>
-                                    {!! Form::checkbox('remember', 'remember') !!} Lembrar acesso
-                                </label>
-                            </div>
+                            <a href="{{ url('register') }}" class="btn btn-link">Registre-se</a>
                         </div>
 
                         <div class="col-xs-4">
@@ -60,8 +56,6 @@
                     </div>
 
                 {!! Form::close() !!}
-
-                <a href="{{ url('register') }}" class="text-center">Registre-se</a>
             </div>
         </div>
 
