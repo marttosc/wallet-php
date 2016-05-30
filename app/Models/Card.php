@@ -15,7 +15,7 @@ class Card extends Model
      * @var array
      */
     protected $fillable = [
-        'user_id', 'flag_id', 'card', 'expires_in', 'cvc', 'limit',
+        'user_id', 'flag_id', 'card', 'expires_in', 'cvc', 'limit', 'closes_at',
     ];
 
     /**
@@ -33,7 +33,7 @@ class Card extends Model
      * @var array
      */
     protected $dates = [
-        'expires_in', 'created_at', 'updated_at', 'deleted_at'
+        'expires_in', 'closes_at', 'created_at', 'updated_at', 'deleted_at'
     ];
 
     /**
@@ -64,5 +64,43 @@ class Card extends Model
     public function user()
     {
         return $this->belongsTo('Wallet\Models\User', 'user_id', 'id');
+    }
+
+    /**
+     * Scope a query to only include cards that close in less than 15 days.
+     *
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeClosing($query)
+    {
+        $carbon = app(\Carbon\Carbon::class);
+
+        return $query->get()->filter(function($card) use ($carbon) {
+            return $card->closes_at->diff($carbon->now())->days <= 15;
+        });
+    }
+
+    /**
+     * Scope a query to only include unique flags used in the cards.
+     *
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeUniqueFlags($query)
+    {
+        return $query->get()->unique(function($card) {
+            return $card->flag_id;
+        });
+    }
+
+    /**
+     * Scope a query to get the cumulative limit.
+     *
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeCumulativeLimit($query)
+    {
+        return $query->get()->sum(function($card) {
+            return $card->limit;
+        });
     }
 }
