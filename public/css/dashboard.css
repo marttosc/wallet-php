@@ -10881,4 +10881,7 @@ button.close {
 .ion-xbox:before {
   content: ""; }
 
+th {
+  text-align: center; }
+
 /*# sourceMappingURL=dashboard.css.map */

@@ -19,6 +19,10 @@ Route::group(
     ],
     function () {
         Route::get('/', ['as' => 'dashboard', 'uses' => 'HomeController@index']);
+
+        Route::resource('card', 'CardController', ['except' => [
+            'show'
+        ]]);
     }
 );
 

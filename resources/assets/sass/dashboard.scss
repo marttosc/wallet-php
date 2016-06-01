@@ -10,3 +10,7 @@ $icon-font-path: "../fonts/" !default;
 $ionicons-font-path: "../fonts" !default;
 
 @import "node_modules/ionicons/scss/ionicons";
+
+th {
+    text-align: center;
+}

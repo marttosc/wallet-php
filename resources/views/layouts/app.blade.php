@@ -49,7 +49,7 @@
                                     <li class="user-body">
                                         <div class="row">
                                             <div class="col-xs-12 text-center">
-                                                <a href="#">Cartões</a>
+                                                <a href="{{ route('dashboard.card.index') }}">Cartões</a>
                                             </div>
                                         </div>
                                     </li>
@@ -86,6 +86,12 @@
                             <a href="{{ route('dashboard') }}">
                                 <i class="fa fa-dashboard"></i>
                                 <span>Início</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('dashboard.card.index') }}">
+                                <i class="fa fa-credit-card-alt"></i>
+                                <span>Cartões</span>
                             </a>
                         </li>
                     </ul>
