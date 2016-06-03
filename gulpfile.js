@@ -31,6 +31,9 @@ elixir(function(mix) {
         .copy('node_modules/font-awesome/fonts/*.*', 'public/fonts/')
         .copy('node_modules/ionicons/fonts/*.*', 'public/fonts/')
 
+        // Copy Plugins
+        .copy('resources/assets/plugins/datepicker/datepicker.css', 'public/plugins/datepicker/css/datepicker.css')
+
         // Copy AdminLTE js
         .copy('node_modules/admin-lte/dist/js/app.js', 'public/js/adminlte.js')
 
@@ -66,5 +69,14 @@ elixir(function(mix) {
                 'site.js'
             ],
             'public/js/site.js'
+        )
+
+        // Union scripts
+        .scripts(
+            [
+                '../plugins/datepicker/datepicker.js',
+                '../plugins/datepicker/locales/bootstrap-datepicker.pt-BR.js'
+            ],
+            'public/plugins/datepicker/js/datepicker.js'
         );
 });

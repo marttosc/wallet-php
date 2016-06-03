@@ -15,6 +15,7 @@
 
         <link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
         <link href="{{ asset('css/adminlte.css') }}" rel="stylesheet">
+        @yield('stylesheets')
     </head>
     <body class="hold-transition skin-purple sidebar-mini">
         <div class="wrapper">
@@ -123,5 +124,6 @@
         <script src="{{ asset('js/bootstrap.js') }}"></script>
         <script src="{{ asset('js/dashboard.js') }}"></script>
         <script src="{{ asset('js/adminlte.js') }}"></script>
+        @yield('javascripts')
     </body>
 </html>

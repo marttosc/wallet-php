@@ -4,6 +4,7 @@ namespace Wallet\Http\Controllers\Dashboard;
 
 use Auth;
 use Wallet\Models\Card;
+use Wallet\Models\Flag;
 use Wallet\Http\Requests;
 use Illuminate\Http\Request;
 use Wallet\Http\Controllers\DashboardController as Dashboard;
@@ -29,7 +30,16 @@ class CardController extends Dashboard
      */
     public function create()
     {
-        //
+        $_flags = Flag::orderBy('name', 'asc')->get(['id', 'name']);
+
+        $flags = [];
+
+        foreach ($_flags as $flag)
+        {
+            $flags[$flag['id']] = $flag['name'];
+        }
+
+        return view('dashboard::card.create', compact('flags'));
     }
 
     /**
