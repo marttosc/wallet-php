@@ -14,7 +14,7 @@
                 <h3 class="box-title">Adicionar novo cartão</h3>
             </div>
 
-            {!! Form::open(['route' => 'dashboard.card.create', 'method' => 'put']) !!}
+            {!! Form::open(['route' => 'dashboard.card.store']) !!}
                 <div class="box-body">
                     <div class="row">
                         <div class="col-xs-6">

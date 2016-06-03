@@ -65,4 +65,25 @@ class Card extends Model
     {
         return $this->belongsTo('Wallet\Models\User', 'user_id', 'id');
     }
+
+    /**
+     * Get the card's number.
+     *
+     * @return string
+     */
+    public function getCardAttribute()
+    {
+        return $this->parseCard($this->attributes['card']);
+    }
+
+    /**
+     * Add spaces to card number.
+     *
+     * @param  string  $card
+     * @return string
+     */
+    protected function parseCard($card)
+    {
+        return trim(chunk_split(str_replace(' ', '', $card), 4, ' '));
+    }
 }
