@@ -22,13 +22,25 @@
     </div>
 @endif
 
-@if (session('success-message'))
+@if (session('create-message'))
     <div class="row">
         <div class="col-xs-12">
             <div class="alert alert-success alert-dismissible">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                 <h4><i class="icon fa fa-check"></i> Tudo certo!</h4>
-                {{ session('success-message') }}
+                {{ session('create-message') }}
+            </div>
+        </div>
+    </div>
+@endif
+
+@if (session('update-message'))
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="alert alert-info alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <h4><i class="icon fa fa-check"></i> Alteração realizada!</h4>
+                {{ session('update-message') }}
             </div>
         </div>
     </div>

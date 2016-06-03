@@ -8,6 +8,7 @@ use Wallet\Models\Flag;
 use Wallet\Http\Requests;
 use Illuminate\Http\Request;
 use Wallet\Http\Requests\StoreCardRequest;
+use Wallet\Http\Requests\UpdateCardRequest;
 use Wallet\Http\Controllers\DashboardController as Dashboard;
 
 class CardController extends Dashboard
@@ -55,19 +56,19 @@ class CardController extends Dashboard
 
         $card = new Card;
 
-        $card->user_id = Auth::id();
-        $card->flag_id = $request->input('flag');
-        $card->card = $request->input('card');
-        $card->cvc = $request->input('cvc');
+        $card->user_id    = Auth::id();
+        $card->flag_id    = $request->input('flag');
+        $card->card       = $request->input('card');
+        $card->cvc        = $request->input('cvc');
         $card->expires_in = $carbon->createFromFormat('m/Y', $request->input('expires_in'))->format('Y-m-d');
-        $card->closes_at = $carbon->createFromFormat('d/m/Y', $request->input('closes_at'))->format('Y-m-d');
-        $card->limit = $request->input('limit');
+        $card->closes_at  = $carbon->createFromFormat('d/m/Y', $request->input('closes_at'))->format('Y-m-d');
+        $card->limit      = $request->input('limit');
 
         $card->save();
 
         return redirect()
                 ->route('dashboard.card.index')
-                ->with('success-message', 'Cartão cadastrado com sucesso.');
+                ->with('create-message', 'Cartão cadastrado com sucesso.');
     }
 
     /**
@@ -78,19 +79,32 @@ class CardController extends Dashboard
      */
     public function edit($id)
     {
-        //
+        $card = Card::findOrFail($id);
+
+        return view('dashboard::card.edit', compact('card'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  Wallet\Http\Requests\UpdateCardRequest  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateCardRequest $request, $id)
     {
-        //
+        $carbon = app(\Carbon\Carbon::class);
+
+        $card = Card::findOrFail($id);
+
+        $card->closes_at = $carbon->createFromFormat('d/m/Y', $request->input('closes_at'))->format('Y-m-d');
+        $card->limit     = $request->input('limit');
+
+        $card->save();
+
+        return redirect()
+                ->route('dashboard.card.index')
+                ->with('update-message', 'Cartão atualizado com sucesso.');
     }
 
     /**
