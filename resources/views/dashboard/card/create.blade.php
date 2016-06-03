@@ -4,10 +4,6 @@
 <link href="{{ asset('plugins/datepicker/css/datepicker.css') }}" rel="stylesheet">
 @endsection
 
-@section('javascripts')
-<script src="{{ asset('plugins/datepicker/js/datepicker.js') }}"></script>
-@endsection
-
 @section('title', 'Cadastrar novo cartão')
 
 @section('content')
@@ -102,4 +98,31 @@
         </div>
     </div>
 </div>
+@endsection
+
+@section('javascripts')
+<script src="{{ asset('plugins/datepicker/js/datepicker.js') }}"></script>
+
+<script type="text/javascript">
+    /**
+     * Create card functions.
+     */
+    $(function() {
+        $('.datepicker-expires').datepicker({
+            autoclose: true,
+            clearBtn: true,
+            format: 'mm/yyyy',
+            language: 'pt-BR',
+            startView: 'year',
+            minViewMode: 'months'
+        });
+
+        $('.datepicker-closes').datepicker({
+            autoclose: true,
+            clearBtn: true,
+            format: 'dd/mm/yyyy',
+            language: 'pt-BR'
+        });
+    });
+</script>
 @endsection
