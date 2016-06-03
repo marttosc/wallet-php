@@ -22,7 +22,9 @@ To install follow these steps:
 
 `php artisan migrate:install && php artisan migrate && php artisan db:seed`
 
-Wallet already comes with CSS and JavaScript compiled, but if you added some extra asset, you must run Gulp to compile it again.
+* Run the Gulp tasks.
+
+`gulp`
 
 ## Themes
 
