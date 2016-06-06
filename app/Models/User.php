@@ -100,7 +100,7 @@ class User extends Authenticatable
      */
     public function cards()
     {
-        return $this->hasMany('Wallet\Models\Card');
+        return $this->hasMany(Wallet\Models\Card::class);
     }
 
     /**

@@ -53,7 +53,7 @@ class Card extends Model
      */
     public function flag()
     {
-        return $this->hasOne('Wallet\Models\Flag', 'id', 'flag_id');
+        return $this->hasOne(Wallet\Models\Flag::class, 'id', 'flag_id');
     }
 
     /**
@@ -63,7 +63,7 @@ class Card extends Model
      */
     public function user()
     {
-        return $this->belongsTo('Wallet\Models\User', 'user_id', 'id');
+        return $this->belongsTo(Wallet\Models\User::class, 'user_id', 'id');
     }
 
     /**
